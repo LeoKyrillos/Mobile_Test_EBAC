@@ -1,5 +1,5 @@
 {
-  "name": "Mobile_Automation_Test",
+  "name": "Mobile_Test_EBAC",
   "type": "module",
   "devDependencies": {
     "@wdio/cli": "^8.32.3",
