@@ -11,4 +11,3 @@ describe('My Login application', () => {
         expect((await profilePage.ProfileName('EBAC Cliente')).isDisplayed()).toBeTruthy()
     })
 })
-

@@ -1,6 +1,5 @@
 import { $ } from '@wdio/globals'
 
-
 class LoginPage {
     
     //get por ID
