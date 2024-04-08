@@ -2,9 +2,7 @@ export const config = {
     
     runner: 'local',
     port: 4723,  
-    specs: [
-        './test/specs/**/*.js'
-    ],
+    specs: ['./test/specs/**/*.js'],
     maxInstances: 1,
     capabilities: [{
         platformName: 'Android',
@@ -20,13 +18,11 @@ export const config = {
     connectionRetryTimeout: 120000,
     connectionRetryCount: 3,
     framework: 'mocha',
-    reporters: ['spec',
-        ['allure', {
+    reporters: ['spec',['allure', {
             outputDir: 'allure-results',
             disableWebdriverStepsReporting: true,
             disableWebdriverScreenshotsReporting: false,
-        }]
-    ],
+        }]],
     mochaOpts: {
         ui: 'bdd',
         timeout: 60000

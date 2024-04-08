@@ -33,13 +33,21 @@ class signUpPage {
     async signUp(firstName, lastName, phoneNumber, emailAddress, password, rePassword){
         
         await this.profile.click()
-        await this.signUp.click()
+        
+        const signUp = await $('id:signUp');
+        await signUp.waitForExist();
+        await signUp.click();
+
+        //await this.signUp.click()
         await this.firstName.setValue(firstName)
         await this.lastName.setValue(lastName)
         await this.phoneNumber.setValue(phoneNumber)
         await this.emailAddress.setValue(emailAddress)
         await this.password.setValue(password)
         await this.rePassword.setValue(rePassword)
+
+        await browser.scroll(0, 200)
+        
         await this.btnCreate.click()
     }   
 }
