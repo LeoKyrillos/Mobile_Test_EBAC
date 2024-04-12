@@ -34,20 +34,16 @@ class signUpPage {
         
         await this.profile.click()
         
-        const signUp = await $('id:signUp');
-        await signUp.waitForExist();
-        await signUp.click();
-
-        //await this.signUp.click()
+        const signUp = await $('id:signUp')
+        await signUp.waitForExist()
+        await signUp.click()
+        
         await this.firstName.setValue(firstName)
         await this.lastName.setValue(lastName)
         await this.phoneNumber.setValue(phoneNumber)
         await this.emailAddress.setValue(emailAddress)
         await this.password.setValue(password)
-        await this.rePassword.setValue(rePassword)
-
-        await browser.scroll(0, 200)
-        
+        await this.rePassword.setValue(rePassword)               
         await this.btnCreate.click()
     }   
 }
